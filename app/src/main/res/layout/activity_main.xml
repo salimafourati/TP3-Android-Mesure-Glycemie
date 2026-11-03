@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:gravity="center"
+        android:text="Mesure de niveau de glycémie"
+        android:textColor="@color/red"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="Votre age"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/sbAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="120" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="Est ce que vous jeunez?"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rbtoui"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:textColor="@color/black2"
+            android:textSize="20sp"
+            android:text="Oui" />
+        <RadioButton
+            android:id="@+id/rbtnon"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textColor="@color/black2"
+            android:textSize="20sp"
+            android:text="Non" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="valeur mesurée en(mmol)"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:textSize="20sp"
+         />
+
+    <Button
+        android:id="@+id/btnConsulter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Consulter"
+        android:onClick="calculer"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="25sp"
+        />
+
+</LinearLayout>
